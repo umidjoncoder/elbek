@@ -1,0 +1,218 @@
+[
+	{
+		"neighborhood": "Uptown",
+		"name": "Hotel Belleclaire",
+		"address": "2175 Broadway, New York, NY 10024",
+		"contact": "(212) 362-7700",
+		"img": "/assets/hotels/belleclaire.jpeg",
+		"booking": "https://www.hotelbelleclaire.com/"
+	},
+	{
+		"neighborhood": "Uptown",
+		"name": "Courtyard Marriott",
+		"address": "410 E 92nd St, New York, NY 10128",
+		"contact": "(212) 410-6777",
+		"img": "/assets/hotels/courtyard.jpeg",
+		"booking": "https://www.marriott.com/en-us/hotels/nycmh-courtyard-new-york-manhattan-upper-east-side/overview/"
+	},
+	{
+		"neighborhood": "Uptown",
+		"name": "Lucerne Hotel",
+		"address": "201 W 79th St, New York, NY 10024",
+		"contact": "(212) 875-1000",
+		"img": "/assets/hotels/lucerne.jpeg",
+		"booking": "https://thelucernehotel.com/"
+	},
+	{
+		"neighborhood": "Uptown",
+		"name": "Loews Regency",
+		"address": "540 Park Ave, New York, NY 10065",
+		"contact": "(212) 759-4100",
+		"img": "/assets/hotels/loews.jpeg",
+		"booking": "https://www.loewshotels.com/regency-hotel"
+	},
+	{
+		"neighborhood": "Uptown",
+		"name": "Carlyle Hotel",
+		"address": "35 E 76th St, New York, NY 10021",
+		"contact": "(212) 744-1600",
+		"img": "/assets/hotels/carlyle.jpg",
+		"booking": "https://www.rosewoodhotels.com/en/the-carlyle-new-york"
+	},
+	{
+		"neighborhood": "Uptown",
+		"name": "Lowell Hotel",
+		"address": "28 E 63rd St, New York, NY 10065",
+		"contact": "(212) 838-1400",
+		"img": "/assets/hotels/lowell.jpeg",
+		"booking": "https://www.lowellhotel.com/"
+	},
+	{
+		"neighborhood": "Uptown",
+		"name": "Aloft Harlem",
+		"address": "2296 Frederick Douglass Blvd, New York, NY 10027",
+		"contact": "(212) 749-4000",
+		"img": "/assets/hotels/aloft.jpeg",
+		"booking": "https://www.marriott.com/en-us/hotels/nyclh-aloft-harlem/overview/"
+	},
+	{
+		"neighborhood": "Uptown",
+		"name": "Edge Hotel",
+		"address": "514 W 168th St, New York, NY 10032",
+		"contact": "(212) 543-0005",
+		"img": "/assets/hotels/edge.jpeg",
+		"booking": "https://www.edgehotelnyc.com/"
+	},
+	{
+		"neighborhood": "Uptown",
+		"name": "Marmara",
+		"address": "301 E 94th St, New York, NY 10128",
+		"contact": "(212) 427-3100",
+		"img": "/assets/hotels/marmara.jpeg",
+		"booking": "https://park.marmaranyc.com/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Baccarat Hotel",
+		"address": "28 West 53rd Street, New York, NY 10019",
+		"contact": "(212) 790-8800",
+		"img": "/assets/hotels/baccarat.jpeg",
+		"booking": "https://www.baccarathotels.com/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Library Hotel",
+		"address": "299 Madison Aveneue, E 41st St, New York, NY 10017",
+		"contact": "(212) 983-4500",
+		"img": "/assets/hotels/library.jpeg",
+		"booking": "https://libraryhotel.com/en/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Peninsula Hotel",
+		"address": "700 Fifth Avenue, 55th Street, New York, NY 10019",
+		"contact": "(212) 956-2888",
+		"img": "/assets/hotels/peninsula.jpeg",
+		"booking": "https://www.peninsula.com/en/new-york/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Renaissance Hotel",
+		"address": "218 West 35th Street, New York, NY 10001",
+		"contact": "(212) 239-0014",
+		"img": "/assets/hotels/renaissance.jpeg",
+		"booking": "https://www.marriott.com/en-us/hotels/nycsg-renaissance-new-york-midtown-hotel/overview/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Ritz-Carlton",
+		"address": "50 Central Park S, New York, NY 10019",
+		"contact": "(212) 308-9100",
+		"img": "/assets/hotels/ritz.jpeg",
+		"booking": "https://www.ritzcarlton.com/en/hotels/nyccp-the-ritz-carlton-new-york-central-park/overview/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Draper Hotel",
+		"address": "4-6 W 37th St, New York, NY 10018",
+		"contact": "(212) 645-0080",
+		"img": "/assets/hotels/draper.jpeg",
+		"booking": "https://www.hilton.com/en/hotels/nycdrup-the-draper-new-york/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Arlo Midtown",
+		"address": "351 W 38th St, New York, NY 10018",
+		"contact": "(212) 343-7000",
+		"img": "/assets/hotels/arlo-mid.jpeg",
+		"booking": "https://arlohotels.com/midtown/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Cachet Boutique Hotel",
+		"address": "510 W 42nd St, New York, NY 10036",
+		"contact": "(212) 947-2999",
+		"img": "/assets/hotels/cachet.webp",
+		"booking": "https://www.cachethotelnewyork.com/"
+	},
+	{
+		"neighborhood": "Midtown",
+		"name": "Dream Midtown",
+		"address": "210 W 55th St, New York, NY 10019",
+		"contact": "(212) 247-2000",
+		"img": "/assets/hotels/dream.jpeg",
+		"booking": "https://www.hyatt.com/en-US/hotel/new-york/dream-midtown/nycdm"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "Crosby Street",
+		"address": "79 Crosby St, New York, NY 10012",
+		"contact": "(212) 226-6400",
+		"img": "/assets/hotels/crosby.jpeg",
+		"booking": "https://www.firmdalehotels.com/hotels/new-york/crosby-street-hotel/"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "The Beekman",
+		"address": "123 Nassau St, New York, NY 10038",
+		"contact": "(212) 233-2300",
+		"img": "/assets/hotels/beekman.jpeg",
+		"booking": "https://www.thebeekman.com/"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "Bowery Hotel",
+		"address": "335 Bowery, New York, NY 10003",
+		"contact": "(212) 505-9100",
+		"img": "/assets/hotels/bowery.jpeg",
+		"booking": "https://theboweryhotel.com/"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "Conrad Downtown",
+		"address": "351 W 38th St, New York, NY 10018",
+		"contact": "(212) 945-0100",
+		"img": "/assets/hotels/conrad.jpeg",
+		"booking": "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "Marriott Downtown",
+		"address": "85 West Street At, Albany St, New York, NY 10006",
+		"contact": "(212) 385-4900",
+		"img": "/assets/hotels/downtown.jpeg",
+		"booking": "https://www.marriott.com/en-us/hotels/nycws-new-york-marriott-downtown/overview/"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "Ludlow Hotel",
+		"address": "180 Ludlow St, New York, NY 10002",
+		"contact": "(212) 432-1818",
+		"img": "/assets/hotels/ludlow.jpeg",
+		"booking": "https://ludlowhotel.com/"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "Arlo SoHo",
+		"address": "231 Hudson St, New York, NY 10013",
+		"contact": "(212) 342-7000",
+		"img": "/assets/hotels/arlo-soho.jpeg",
+		"booking": "https://arlohotels.com/soho/"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "NOMO SoHo",
+		"address": "9 Crosby St, New York, NY 10013",
+		"contact": "(646) 218-6400",
+		"img": "/assets/hotels/nomo.jpeg",
+		"booking": "https://www.nomosoho.com/"
+	},
+	{
+		"neighborhood": "Downtown",
+		"name": "The Standard",
+		"address": "848 Washington St, New York, NY 10014",
+		"contact": "(212) 645-4646",
+		"img": "/assets/hotels/standard.jpeg",
+		"booking": "https://www.standardhotels.com/new-york/properties/high-line"
+	}
+]

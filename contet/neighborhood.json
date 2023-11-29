@@ -1,0 +1,58 @@
+[
+	{
+		"group": "Uptown",
+		"neighborhoods": [
+			"Marble Hill",
+			"Washington Heights",
+			"Harlem",
+			"Marble Hill",
+			"Upper East Side",
+			"Lenox Hill",
+			"Carnegie Hill",
+			"Upper West Side",
+			"Lincoln Square"
+		],
+		"description": "Uptown Manhattan is the northern part of the island, a diverse and thriving region of New York City that offers a unique blend of history, culture, and natural beauty. Central Park, a sprawling urban oasis, graces its center, providing recreational opportunities and a tranquil escape from the city's hustle and bustle. Uptown is famous for its iconic museums, including the Metropolitan Museum of Art, the American Museum of Natural History, and The Cloisters. Uptown also historic neighborhoods like the Upper East Side and Upper West Side, known for their charming streets, brownstone buildings, and upscale dining."
+	},
+	{
+		"group": "Midtown",
+		"neighborhoods": [
+			"Columbus Circle",
+			"Diamond District",
+			"Theater District",
+			"Midtown East",
+			"Times Square",
+			"Hudson Yards",
+			"Hell's Kitchen",
+			"Garment District",
+			"Herald Square",
+			"Koreatown",
+			"Murray Hill",
+			"Madison Square",
+			"NoMad",
+			"Chelsea",
+			"Flatiron District"
+		],
+		"description": "Midtown Manhattan is the bustling epicenter of New York City, characterized by its iconic skyline and a blend of commerce, culture, and entertainment. Stretching from 34th Street to 59th Street, Midtown is home to world-famous landmarks like Times Square, the Theater District, and Rockefeller Center. It's a hub for business and retail, with Fifth Avenue offering luxury shopping and major corporate headquarters. Midtown's cultural attractions include renowned museums like the Museum of Modern Art (MoMA) and historic sites like St. Patrick's Cathedral. The area also boasts Broadway theaters, where visitors can catch top-notch performances. "
+	},
+	{
+		"group": "Downtown",
+		"neighborhoods": [
+			"Gramercy Park",
+			"Union Square",
+			"Meatpacking District",
+			"East Village",
+			"Greenwich Village",
+			"NoHo",
+			"Bowery",
+			"Lower East Side",
+			"SoHo",
+			"Chinatown",
+			"Financial District",
+			"Five Points",
+			"TriBeCa",
+			"Battery Park City"
+		],
+		"description": "Downtown Manhattan is the vibrant heart of New York City, encompassing a diverse tapestry of neighborhoods that reflect the city's rich history and contemporary spirit. From the bustling Financial District, home to Wall Street and iconic landmarks, to the artistic allure of Tribeca and SoHo, and the cultural melting pots of Chinatown and Little Italy, Downtown Manhattan offers a dynamic blend of business, culture, and cuisine. Its cobblestone streets, historic architecture, and thriving arts scenes are complemented by scenic waterfront views along Battery Park City. "
+	}
+]

@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta
+			name="description"
+			content="Discover New York City's vibrant culture and attractions on our comprehensive NYC travel guide. Find flight times to NYC, explore diverse neighborhoods, uncover top tourist destinations, and choose from a curated selection of the finest hotels for your unforgettable NYC experience."
+		/>
+		<meta name="author" content="Aniqa" />
+		<meta property="og:title" content="Travel Guide: New York City" />
+		<meta
+			property="og:description"
+			content="Discover New York City's vibrant culture and attractions on our comprehensive NYC travel guide. Find flight times to NYC, explore diverse neighborhoods, uncover top tourist destinations, and choose from a curated selection of the finest hotels for your unforgettable NYC experience."
+		/>
+		<meta
+			property="og:image"
+			content="https://raw.githubusercontent.com/aniqatc/nyc-travel/main/assets/og-img.png"
+		/>
+		<meta property="og:url" content="https://nyc.aniqa.dev" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Travel Guide: New York City" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:site" content="@aniqatc" />
+		<meta
+			property="twitter:image"
+			content="https://raw.githubusercontent.com/aniqatc/nyc-travel/main/assets/og-img.png"
+		/>
+		<meta property="twitter:image:alt" content="Hero section of website" />
+		<title>Travel Guide: New York City</title>
+
+		<link rel="stylesheet" href="/styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="/assets/favicon.png" type="image/x-icon" rel="icon" />
+		<script
+			src="https://kit.fontawesome.com/50cde61edc.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="/index.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header-text">
+					<h1><span>New York</span> City</h1>
+					<p>
+						Welcome to the ultimate guide to New York City! Discover the Big
+						Apple's diverse culinary scene, iconic destinations, vibrant
+						neighborhoods, luxurious hotels, and endless activities. Plan your
+						NYC adventure and find your flight time with our quick search tool.
+					</p>
+				</div>
+				<div class="header-cards-wrapper">
+					<div class="header-card header-card__time">
+						<p>
+							<span id="time"></span>
+							<span>Time in NYC</span>
+						</p>
+						<i class="fa-regular fa-clock"></i>
+					</div>
+					<div class="header-card header-card__weather">
+						<div>
+							<img
+								src="/assets/weather/partly-cloudy-day.svg"
+								id="weather-icon"
+								alt="partly cloudy day"
+							/>
+						</div>
+						<div>
+							<p>
+								<span id="weather"></span>
+								<span>Current Weather</span>
+							</p>
+							<p>
+								<a
+									href="https://weather.aniqa.dev"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Weather dashboard for full forecast"
+								>
+									<i class="fa-solid fa-arrow-right-to-bracket"></i>
+								</a>
+							</p>
+						</div>
+					</div>
+					<div class="header-card header-card__fromlocation">
+						<form>
+							<input
+								type="text"
+								placeholder="Search Airport Code"
+								maxlength="3"
+								pattern="[A-Za-z]+"
+								id="search-airport-input"
+							/>
+							<button
+								type="submit"
+								id="search-airport-btn"
+								aria-label="Get Flight Time"
+								aria-describedby="search-airport-input"
+							>
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</button>
+							<button
+								id="search-location-btn"
+								aria-label="Get Flight Time to NYC via Geolocation"
+							>
+								<i class="fa-solid fa-location-dot"></i>
+							</button>
+						</form>
+						<p class="airport-code" id="airport-start-code">SFO</p>
+						<div class="loading-dots">
+							<span class="dot-start"
+								><i class="fa-regular fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-between"
+								><i class="fa-solid fa-circle"></i
+							></span>
+							<span class="dot-end"
+								><i class="fa-regular fa-circle-dot"></i
+							></span>
+						</div>
+					</div>
+					<div class="header-card header-card__tolocation">
+						<div>
+							<i class="fa-solid fa-plane"></i>
+							<p>
+								Flight Time: <span id="flight-time">5H 30M</span><br />
+								Distance: <span id="flight-distance">4,143KM</span>
+							</p>
+						</div>
+						<p class="airport-code">JFK</p>
+					</div>
+					<nav class="header-nav">
+						<div class="header-nav__title">Menu</div>
+						<a href="#about" class="nav-link">
+							<div class="header-card header-card__nav-light">
+								<span>Everything You Need To Know</span>
+								<i class="fa-solid fa-chevron-down"></i>
+							</div>
+						</a>
+						<a href="#destinations" class="nav-link">
+							<div class="header-card header-card__nav-dark">
+								Explore Destinations
+							</div>
+						</a>
+						<a href="#neighborhoods" class="nav-link">
+							<div class="header-card header-card__nav-dark">
+								Neighborhood & Hotels
+							</div>
+						</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<aside>
+			<div class="container">
+				<span>
+					<label for="header-departure-input" class="flight-form__label"
+						>Departure</label
+					>
+					<input
+						id="header-departure-input"
+						type="date"
+						class="flight-form__input"
+						min="2023-09-13"
+				/></span>
+				<span>
+					<label for="header-arrival-input" class="flight-form__label"
+						>Arrival</label
+					>
+					<input
+						id="header-arrival-input"
+						type="date"
+						class="flight-form__input"
+						min="2023-09-13" /></span
+				><span>
+					<label for="header-travelers-input" class="flight-form__label"
+						>Travelers</label
+					>
+
+					<input
+						id="header-travelers-input"
+						type="number"
+						min="1"
+						max="10"
+						placeholder="#"
+						class="flight-form__input"
+				/></span>
+				<button id="flight-form-btn" type="submit">
+					Search Flights
+					<i class="fa-solid fa-arrow-right"></i>
+				</button>
+			</div>
+		</aside>
+		<main class="container">
+			<section id="about">
+				<h2>About New York City</h2>
+				<div class="about-cards-wrapper">
+					<div class="about-card__text">
+						<p>
+							New York City, often referred to as the "Big Apple," is a
+							mesmerizing metropolis that truly never sleeps. With a population
+							exceeding 8 million people, it stands as one of the most populous
+							and diverse cities in the world. The city's multicultural fabric
+							weaves together communities from every corner of the globe,
+							creating a rich tapestry of cultures, languages, and traditions.
+							Whether you're in search of cultural enrichment, culinary
+							adventures, or unforgettable experiences, NYC is a city that
+							continually captivates and inspires.
+						</p>
+					</div>
+					<div class="about-card__data-wrapper">
+						<div class="about-card__data">
+							<div class="about-card__data-population">
+								<div class="about-card__data-heading">
+									<h3>Population</h3>
+									<a
+										href="https://www.census.gov/quickfacts/fact/table/newyorkcitynewyork/PST045222"
+										>Data from US Census Bureau</a
+									>
+								</div>
+								<p>8,335,897 <span>natives</span></p>
+							</div>
+							<div class="about-card__data-population">
+								<div class="about-card__data-heading">
+									<h3>Tourism</h3>
+									<a
+										href="https://assets.simpleviewinc.com/simpleview/image/upload/v1/clients/newyorkcity/NYC_Travel_Tourism_Outlook_ae1b53b9-35a9-401f-b2d4-43eb3604e086.pdf"
+										>Report from NYC Tourism</a
+									>
+								</div>
+								<p>32.9M <span>visitors annually</span></p>
+							</div>
+						</div>
+						<div class="about-card__data">
+							<h3>Residents from 150+ Nations</h3>
+							<ul class="about-card__flags">
+								<li>
+									🇸🇦🇨🇳🇮🇶🇻🇪🇻🇳🇹🇭🇬🇧🇫🇲🇨🇴🇹🇷🇺🇦🇧🇼🇦🇼🇲🇦🇯🇵🇺🇳🇨🇨🇲🇽🇲🇲🇨🇦🇵🇷🇼🇸🇳🇺🇹🇲🇰🇷🇦🇺🇦🇽🇳🇨🇴🇲🇬🇺🇸🇳🇪🇸🇮🇴🇲🇻🇸🇨🇦🇫🇬🇮🇴🇲🇩🇰🇸🇧🇱🇻🇫🇮🇷🇸🇧🇪🇦🇱🇦🇪🇨🇻🇬🇼
+								</li>
+								<li>
+									🇴🇲🇩🇰🇸🇧🇱🇻🇫🇮🇷🇸🇧🇪🇦🇱🇦🇪🇨🇻🇬🇼🇧🇿🇹🇨🇨🇲🇨🇭🇦🇹🇮🇳🇧🇷🇸🇹🇬🇦🇸🇿🇨🇰🇬🇶🇨🇩🇧🇹🇹🇫🇲🇪🇨🇱🇬🇷🇳🇷🇩🇯🇹🇳🇲🇬🇮🇩🇩🇿🇵🇦🇱🇸🇱🇷🇮🇹🇵🇳🇸🇩🇲🇨🇻🇨🇩🇪🇲🇩🇰🇭🇵🇾🇹🇻
+								</li>
+								<li>
+									🇱🇷🇮🇹🇵🇳🇸🇩🇲🇨🇻🇨🇩🇪🇲🇩🇰🇭🇵🇾🇹🇻🇾🇪🇻🇺🇾🇹🇿🇲🇽🇰🇿🇼🇧🇯🇱🇾🇭🇳🇦🇿🇱🇧🇬🇵🇦🇲🇲🇿🇬🇭🇬🇹🇧🇴🇮🇸🇵🇰🇭🇷🇲🇷🇷🇺🇬🇪🇰🇲🇳🇦🇦🇴🇲🇶🇺🇬🇬🇩🇰🇮🇲🇺🇯🇴🇵🇼🇲🇱🇪🇬🇧🇮🇹🇬
+								</li>
+								<li>
+									🇲🇶🇺🇬🇬🇩🇰🇮🇲🇺🇯🇴🇵🇼🇲🇱🇪🇬🇧🇮🇹🇬🇳🇴🇧🇳🇪🇹🇮🇷🇷🇴🇲🇾🇸🇬🇬🇳🇱🇦🇹🇱🇭🇺🇩🇲🇧🇩🇸🇾🇨🇺🇦🇷🇳🇪🇦🇩🇫🇷🇧🇾🇹🇼🇶🇦🇲🇳🇪🇷🇰🇼🇳🇬🇺🇿🇧🇭🇬🇾🇨🇾🇸🇷🇰🇿🇬🇲🇦🇮🇸🇪🇦🇶🇱🇮
+								</li>
+								<li>
+									🇺🇿🇧🇭🇬🇾🇨🇾🇸🇷🇰🇿🇬🇲🇦🇮🇸🇪🇦🇶🇱🇮🇧🇧🇭🇹🇵🇱🇹🇰🇧🇲🇹🇿🇸🇰🇺🇾🇷🇼🇲🇸🇫🇯🇹🇴🇪🇨🇧🇬🇰🇪🇲🇼🇬🇱🇳🇮🇸🇴🇱🇹🇵🇪🇹🇩🇳🇱🇯🇪🇪🇭🇵🇭
+									🇸🇦🇨🇳🇮🇶🇻🇪🇻🇳🇹🇭🇬🇧🇫🇲🇨🇴🇹🇷🇺🇦
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="about__experience-wrapper">
+					<div class="about-card__experience">
+						<h3>Savor Culinary Delights</h3>
+						<div class="food-gallery-card">
+							<div class="gallery-img-wrapper">
+								<img src="/assets/food/indian.png" alt="indian food" /><span
+									class="caption-hover"
+									>Indian</span
+								>
+							</div>
+							<div class="gallery-img-wrapper">
+								<img src="/assets/food/israeli.png" alt="israeli food" /><span
+									class="caption-hover"
+									>Israeli</span
+								>
+							</div>
+							<div class="gallery-img-wrapper">
+								<img src="/assets/food/chinese.png" alt="chinese food" /><span
+									class="caption-hover"
+									>Chinese</span
+								>
+							</div>
+							<div class="gallery-img-wrapper">
+								<img
+									src="/assets/food/dominican.png"
+									alt="dominican food"
+								/><span class="caption-hover">Dominican</span>
+							</div>
+							<div class="gallery-img-wrapper">
+								<img
+									src="/assets/food/ethiopian.png"
+									alt="ethipoian food"
+								/><span class="caption-hover">Ethiopian</span>
+							</div>
+							<div class="gallery-img-wrapper">
+								<img src="/assets/food/french.png" alt="french food" /><span
+									class="caption-hover"
+									>French</span
+								>
+							</div>
+							<div class="gallery-img-wrapper">
+								<img src="/assets/food/japanese.png" alt="japanese food" /><span
+									class="caption-hover"
+									>Japanese</span
+								>
+							</div>
+							<div class="gallery-img-wrapper">
+								<img src="/assets/food/greek.png" alt="greek food" /><span
+									class="caption-hover"
+									>Greek</span
+								>
+							</div>
+							<div class="gallery-img-wrapper">
+								<img src="/assets/food/italian.png" alt="italian food" /><span
+									class="caption-hover"
+									>Italian</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="about-card__experience">
+						<h3>Discover the Best Activities</h3>
+						<div class="entertainment-card-wrapper">
+							<div class="entertainment-card">
+								<div>
+									<p class="entertainment-card__heading">Broadway Shows</p>
+									<p class="entertainment-card__caption">
+										Broadway shows are the pinnacle of theatrical artistry,
+										enchanting audiences with captivating performances, stunning
+										productions, and unforgettable storytelling in the heart of
+										New York City.
+									</p>
+								</div>
+								<a
+									href="https://www.broadway.com/"
+									class="entertainment-card__btn"
+									>Get Tickets <i class="fa-solid fa-music"></i>
+								</a>
+							</div>
+							<div class="entertainment-card">
+								<div>
+									<p class="entertainment-card__heading">Live Comedy</p>
+									<p class="entertainment-card__caption">
+										Known for The Famous Gotham Comedy Clup, Comic Strip Live &
+										Broadway Comedy Club.
+									</p>
+								</div>
+								<a
+									href="https://www.newyorkcitytheatre.com/index_comedy.php"
+									class="entertainment-card__btn"
+									>Get Tickets <i class="fa-solid fa-masks-theater"></i
+								></a>
+							</div>
+							<div class="entertainment-card">
+								<div>
+									<p class="entertainment-card__heading">Concerts</p>
+									<p class="entertainment-card__caption">
+										Enjoy Live Music at Lincoln Center, Carnegie Hall, Radio
+										City Music Hall, Madison Square Garden and Barclays Center.
+									</p>
+								</div>
+								<a
+									href="https://www.nyc.com/concert_tickets/"
+									class="entertainment-card__btn"
+									>Get Tickets <i class="fa-solid fa-drum"></i>
+								</a>
+							</div>
+							<div class="entertainment-card">
+								<div>
+									<p class="entertainment-card__heading">Museums & Galleries</p>
+									<p class="entertainment-card__caption">
+										Museums in NYC offer a cultural treasure trove, showcasing a
+										diverse array of art, history, and science exhibits,
+										inviting visitors to explore the rich tapestry of human
+										knowledge and creativity.
+									</p>
+								</div>
+								<a
+									href="https://www.nyctourism.com/things-to-do/museums-and-galleries"
+									class="entertainment-card__btn"
+									>Get Tickets <i class="fa-solid fa-landmark"></i
+								></a>
+							</div>
+
+							<div class="entertainment-card">
+								<div>
+									<p class="entertainment-card__heading">Cultural Shows</p>
+									<p class="entertainment-card__caption">
+										Cultural shows in NYC celebrate the city's rich diversity,
+										offering a vibrant tapestry of performances and exhibitions
+										that embrace and honor a multitude of cultures from around
+										the world.
+									</p>
+								</div>
+								<a
+									href="https://www.nycitycenter.org/events-tickets/"
+									class="entertainment-card__btn"
+									>Get Tickets <i class="fa-solid fa-people-group"></i
+								></a>
+							</div>
+							<div class="entertainment-card">
+								<div>
+									<p class="entertainment-card__heading">Sports Games</p>
+									<p class="entertainment-card__caption">
+										See the New York Giants, New York Nets, New York Jets, New
+										York Knicks, New York Rangers in action.
+									</p>
+								</div>
+								<a
+									href="https://www.nyc.com/sport_tickets/"
+									class="entertainment-card__btn"
+									>Get Tickets <i class="fa-solid fa-basketball"></i
+								></a>
+							</div>
+
+							<div class="entertainment-card">
+								<div>
+									<p class="entertainment-card__heading">Central Park</p>
+									<p class="entertainment-card__caption">
+										The park features picturesque landscapes, walking trails,
+										boating, and cultural attractions.
+									</p>
+								</div>
+								<a
+									href="https://www.centralparknyc.org/"
+									class="entertainment-card__btn"
+									>Get Tickets <i class="fa-solid fa-tree"></i
+								></a>
+							</div>
+							<div class="entertainment-card">
+								<div>
+									<p class="entertainment-card__heading">Ellis Island</p>
+									<p class="entertainment-card__caption">
+										Ellis Island, a symbol of hope and opportunity, stands as a
+										historic gateway that welcomed millions of immigrants to the
+										United States, preserving their stories and contributing to
+										the nation's rich heritage.
+									</p>
+								</div>
+								<a
+									href="https://www.statueofliberty.org/ellis-island/"
+									class="entertainment-card__btn"
+									>Get Tickets <i class="fa-solid fa-ferry"></i
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="destinations">
+				<h2>Explore Top Destinations</h2>
+				<p>
+					Explore our curated guide to the most captivating and unforgettable
+					attractions at the heart of New York City. These destinations offer a
+					glimpse into the city's rich history, culture, and endless
+					possibilities for exploration. Whether you're planning your first
+					visit or seeking new adventures in the city you call home, let this
+					guide be your gateway to the best that New York City has to offer.
+				</p>
+				<div class="destination-card-wrapper">
+					<div class="destination-card">
+						<div class="destination-card__content">
+							<h3>Empire State Building</h3>
+							<div class="destination-img-wrapper">
+								<img
+									class="destination-img"
+									src="/assets/destinations/empire.jpg"
+									alt="empire state building against nyc skyline"
+								/>
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12090.470242661817!2d-73.99596412554982!3d40.74844004220779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1694722145505!5m2!1sen!2sus"
+									style="border: 0"
+									allowfullscreen=""
+									referrerpolicy="no-referrer-when-downgrade"
+									class="destination-map"
+								></iframe>
+							</div>
+							<p>
+								The Empire State Building, an iconic skyscraper in the heart of
+								Manhattan, stands as a symbol of architectural marvel and urban
+								grandeur. Soaring 1,454 feet into the sky, it offers
+								breathtaking panoramic views of New York City's skyline.
+							</p>
+						</div>
+						<div class="destination-card__footer">
+							<div class="destination-card__rating">
+								<span
+									><i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i
+								></span>
+								<p>4.7 <small>(96,635 Reviews)</small></p>
+							</div>
+							<button class="toggle-map-btn">
+								See Map
+								<i class="fa-solid fa-map-location-dot"></i>
+							</button>
+						</div>
+					</div>
+					<div class="destination-card">
+						<div class="destination-card__content">
+							<h3>Vessel</h3>
+							<div class="destination-img-wrapper">
+								<img
+									class="destination-img"
+									src="/assets/destinations/vessel.jpg"
+									alt="full view of the vessel"
+								/>
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.3735864775344!2d-74.00472862397221!3d40.75380727138736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259b4160028ab%3A0x414b171aac155dc0!2sVessel!5e0!3m2!1sen!2sus!4v1694828917462!5m2!1sen!2sus"
+									style="border: 0"
+									allowfullscreen=""
+									referrerpolicy="no-referrer-when-downgrade"
+									class="destination-map"
+								></iframe>
+							</div>
+							<p>
+								The Vessel, a striking centerpiece at Hudson Yards, redefines
+								modern architecture. This honeycomb-like structure, designed by
+								Thomas Heatherwick, invites visitors to climb its spiral
+								staircases and enjoy views of the city.
+							</p>
+						</div>
+						<div class="destination-card__footer">
+							<div class="destination-card__rating">
+								<span
+									><i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star-half"></i
+								></span>
+								<p>4.6 <small>(28,947 Reviews)</small></p>
+							</div>
+							<button class="toggle-map-btn">
+								See Map
+								<i class="fa-solid fa-map-location-dot"></i>
+							</button>
+						</div>
+					</div>
+					<div class="destination-card">
+						<div class="destination-card__content">
+							<h3>Edge NYC</h3>
+							<div class="destination-img-wrapper">
+								<img
+									class="destination-img"
+									src="/assets/destinations/edge.jpeg"
+									alt="side view of the Edge building"
+								/>
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.359207833589!2d-74.00354932397214!3d40.75412357138731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2590de5aaaadd%3A0xcc6b2b13b4bd86f!2sEdge!5e0!3m2!1sen!2sus!4v1694829127736!5m2!1sen!2sus"
+									style="border: 0"
+									allowfullscreen=""
+									referrerpolicy="no-referrer-when-downgrade"
+									class="destination-map"
+								></iframe>
+							</div>
+							<p>
+								The Edge is the highest outdoor sky deck in the Western
+								Hemisphere. Soaring 1,131 feet above the city with glass-floored
+								viewing platform, it redefines the skyline experience, inviting
+								visitors to marvel at the city's splendor from new heights.
+							</p>
+						</div>
+						<div class="destination-card__footer">
+							<div class="destination-card__rating">
+								<span
+									><i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star-half"></i
+								></span>
+								<p>4.5 <small>(15,400 Reviews)</small></p>
+							</div>
+							<button class="toggle-map-btn">
+								See Map
+								<i class="fa-solid fa-map-location-dot"></i>
+							</button>
+						</div>
+					</div>
+					<div class="destination-card">
+						<div class="destination-card__content">
+							<h3>Brooklyn Bridge</h3>
+							<div class="destination-img-wrapper">
+								<img
+									class="destination-img"
+									src="/assets/destinations/brooklyn.jpg"
+									alt="full view of the brooklyn bridge"
+								/>
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12098.167636954853!2d-73.9968643!3d40.7060855!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a2343ce7b2b%3A0x2526ddba7abd465c!2sBrooklyn%20Bridge!5e0!3m2!1sen!2sus!4v1694829548536!5m2!1sen!2sus"
+									style="border: 0"
+									allowfullscreen=""
+									referrerpolicy="no-referrer-when-downgrade"
+									class="destination-map"
+								></iframe>
+							</div>
+							<p>
+								The Brooklyn Bridge, an 1883 marvel, links Manhattan and
+								Brooklyn. Its grand towers and sweeping arches frame stunning
+								views of the city. It's a symbol of innovation, uniting two
+								boroughs and standing as a testament to New York's indomitable
+								spirit.
+							</p>
+						</div>
+						<div class="destination-card__footer">
+							<div class="destination-card__rating">
+								<span
+									><i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i
+								></span>
+								<p>4.8 <small>(68,553 Reviews)</small></p>
+							</div>
+							<button class="toggle-map-btn">
+								See Map
+								<i class="fa-solid fa-map-location-dot"></i>
+							</button>
+						</div>
+					</div>
+					<div class="destination-card">
+						<div class="destination-card__content">
+							<h3>Statue of Liberty</h3>
+							<div class="destination-img-wrapper">
+								<img
+									class="destination-img"
+									src="/assets/destinations/statue.jpg"
+									alt="statue of liberty"
+								/>
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12101.225545940446!2d-74.0445004!3d40.6892494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25090129c363d%3A0x40c6a5770d25022b!2sStatue%20of%20Liberty!5e0!3m2!1sen!2sus!4v1694829229465!5m2!1sen!2sus"
+									style="border: 0"
+									allowfullscreen=""
+									referrerpolicy="no-referrer-when-downgrade"
+									class="destination-map"
+								></iframe>
+							</div>
+							<p>
+								The Statue of Liberty, a gift from France to the United States,
+								stands tall in New York Harbor. A symbol of freedom and
+								democracy, Lady Liberty welcomes visitors to explore her crown
+								and pedestal. The statue symbolizes the enduring spirit of
+								America.
+							</p>
+						</div>
+						<div class="destination-card__footer">
+							<div class="destination-card__rating">
+								<span
+									><i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i
+								></span>
+								<p>4.7 <small>(95,322 Reviews)</small></p>
+							</div>
+							<button class="toggle-map-btn">
+								See Map
+								<i class="fa-solid fa-map-location-dot"></i>
+							</button>
+						</div>
+					</div>
+					<div class="destination-card">
+						<div class="destination-card__content">
+							<h3>The High Line</h3>
+							<div class="destination-img-wrapper">
+								<img
+									class="destination-img"
+									src="/assets/destinations/high.jpeg"
+									alt="view of the High Line park from above"
+								/>
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12090.551612257195!2d-74.0047649!3d40.7479925!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259c7840fb4e5%3A0x583f615c850a3c91!2sThe%20High%20Line!5e0!3m2!1sen!2sus!4v1694829430914!5m2!1sen!2sus"
+									style="border: 0"
+									allowfullscreen=""
+									referrerpolicy="no-referrer-when-downgrade"
+									class="destination-map"
+								></iframe>
+							</div>
+							<p>
+								The High Line, an elevated urban park, offers a unique green
+								oasis amidst the city's hustle and bustle. Built on former
+								railway tracks, this innovative park showcases a blend of nature
+								and contemporary art, creating a serene escape above the
+								streets.
+							</p>
+						</div>
+						<div class="destination-card__footer">
+							<div class="destination-card__rating">
+								<span
+									><i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i>
+									<i class="fa-solid fa-star"></i
+								></span>
+								<p>4.7 <small>(54,859 Reviews)</small></p>
+							</div>
+							<button class="toggle-map-btn">
+								See Map
+								<i class="fa-solid fa-map-location-dot"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="neighborhoods">
+				<h2>Neighborhood & Hotel Guide</h2>
+				<div class="neighborhood-row-wrapper">
+					<div class="neighborhood-card">
+						<h3 class="neighborhood-card__heading">Uptown</h3>
+						<div class="neighborhood-card__intro">
+							<p></p>
+							<ul></ul>
+						</div>
+					</div>
+					<div class="hotel-card-wrapper">
+						<div class="hotel-card-buttons-wrapper">
+							<ul>
+								<li>
+									<button class="hotel-button active-button" data-target="0">
+										Hotel Belleclaire
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="1">
+										Courtyard Marriott
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="2">
+										Lucerne Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="3">
+										Loews Regency
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="4">
+										Carlyle Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="5">
+										Lowell Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="6">
+										Aloft Harlem
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="7">
+										Edge Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="8">Marmara</button>
+								</li>
+							</ul>
+						</div>
+						<div class="hotel-card">
+							<div class="hotel-card__heading">
+								<h4>Hotel Belleclaire</h4>
+								<a
+									href="https://www.hotelbelleclaire.com/"
+									class="hotel-booking-btn"
+									target="_blank"
+									>Book Online</a
+								>
+							</div>
+							<img
+								src="/assets/hotels/belleclaire.jpeg"
+								alt="image of Hotel Belleclaire"
+							/>
+							<div class="hotel-card__contact">
+								<p class="hotel-address">2175 Broadway, New York, NY 10024</p>
+								<p class="hotel-number">(212) 362-7700</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="neighborhood-row-wrapper">
+					<div class="neighborhood-card">
+						<h3 class="neighborhood-card__heading">Midtown</h3>
+						<div class="neighborhood-card__intro">
+							<p></p>
+							<ul></ul>
+						</div>
+					</div>
+					<div class="hotel-card-wrapper">
+						<div class="hotel-card-buttons-wrapper">
+							<ul>
+								<li>
+									<button class="hotel-button active-button" data-target="9">
+										Baccarat Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="10">
+										Library Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="11">
+										Peninsula Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="12">
+										Renaissance Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="13">
+										Ritz-Carlton
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="14">
+										Draper Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="15">
+										Arlo Midtown
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="16">
+										Cachet Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="17">
+										Dream Midtown
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="hotel-card">
+							<div class="hotel-card__heading">
+								<h4>Baccarat Hotel</h4>
+								<a
+									href="https://www.baccarathotels.com/"
+									class="hotel-booking-btn"
+									target="_blank"
+									>Book Online</a
+								>
+							</div>
+							<img
+								src="/assets/hotels/baccarat.jpeg"
+								alt="image of Baccarat Hotel"
+							/>
+							<div class="hotel-card__contact">
+								<p class="hotel-address">
+									28 West 53rd Street, New York, NY 10019
+								</p>
+								<p class="hotel-number">(212) 790-8800</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="neighborhood-row-wrapper">
+					<div class="neighborhood-card">
+						<h3 class="neighborhood-card__heading">Downtown</h3>
+						<div class="neighborhood-card__intro">
+							<p></p>
+							<ul></ul>
+						</div>
+					</div>
+					<div class="hotel-card-wrapper">
+						<div class="hotel-card-buttons-wrapper">
+							<ul>
+								<li>
+									<button class="hotel-button active-button" data-target="18">
+										Crosby Street
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="19">
+										The Beekman
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="20">
+										Bowery Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="21">
+										Conrad Downtown
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="22">
+										Marriott Downtown
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="23">
+										Ludlow Hotel
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="24">
+										Arlow SoHo
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="25">
+										NOMO SoHo
+									</button>
+								</li>
+								<li>
+									<button class="hotel-button" data-target="26">
+										The Standard
+									</button>
+								</li>
+							</ul>
+						</div>
+						<div class="hotel-card">
+							<div class="hotel-card__heading">
+								<h4>Crosby Street</h4>
+								<a
+									href="https://www.firmdalehotels.com/hotels/new-york/crosby-street-hotel/"
+									class="hotel-booking-btn"
+									target="_blank"
+									>Book Online</a
+								>
+							</div>
+							<img
+								src="/assets/hotels/crosby.jpeg"
+								alt="image of Crosby Street hotel"
+							/>
+							<div class="hotel-card__contact">
+								<p class="hotel-address">79 Crosby St, New York, NY 10012</p>
+								<p class="hotel-number">(212) 226-6400</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="cta">
+				<div class="cta-text">
+					<h2>Ready to Visit?</h2>
+					<h3>Book with us.</h3>
+					<p>
+						Experience the vibrant energy of New York City like never before.
+						From iconic landmarks to hidden gems, our curated trips offer the
+						perfect blend of exploration and relaxation. Book your adventure
+						today and immerse yourself in the heart of the Big Apple with us.
+					</p>
+				</div>
+				<div class="cta-form-wrapper">
+					<form class="cta-form">
+						<div>
+							<label for="cta-fromlocation">From</label>
+							<input
+								type="text"
+								id="cta-fromlocation"
+								maxlength="3"
+								pattern="[A-Za-z]+"
+								placeholder="SFO (San Francisco Intl.)"
+							/>
+						</div>
+						<div>
+							<label for="cta-tolocation">To</label>
+							<input
+								type="text"
+								id="cta-tolocation"
+								placeholder="JFK (John F Kennedy Intl.)"
+								disabled
+							/>
+						</div>
+						<div>
+							<label for="cta-departure">Departure</label>
+							<input type="date" id="cta-departure" min="2023-09-13" />
+						</div>
+						<div>
+							<label for="cta-arrival">Arrival</label>
+							<input type="date" id="cta-arrival" min="2023-09-13" />
+						</div>
+						<div>
+							<label for="cta-travelers">Travelers</label>
+							<input
+								type="number"
+								id="cta-travelers"
+								min="1"
+								max="10"
+								placeholder="#"
+							/>
+						</div>
+						<button type="submit" id="cta-button">
+							Complete Reservation <i class="fa-solid fa-arrow-right"></i>
+						</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer-content-wrapper">
+				<div>
+					<h5>About NYC</h5>
+					<ul class="footer__nyc-links">
+						<li>
+							<a
+								href="https://www.ny.com/transportation/airports/"
+								target="_blank"
+								rel="noopener noreferrer"
+								>New York Airports</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.kayak.com/flight-routes/United-States-US0/New-York-NYC"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Book Your Flights</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://www.tripadvisor.com/Hotels-g60763-New_York_City_New_York-Hotels.html"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Find A Hotel</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://en.wikipedia.org/wiki/New_York_City"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Wikipedia</a
+							>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h5>About This Site</h5>
+					<p>
+						The site was developed using a combination of HTML, CSS, and
+						JavaScript, and it also integrates DistanceTo from RapidAPI for
+						flight times and OpenWeatherAPI for current weather in the hero
+						section.
+					</p>
+				</div>
+				<div>
+					<h5>About The Creator</h5>
+					<p>
+						The creator is a frontend developer who built this webpage as a
+						means of honing their skills in constructing responsive landing
+						pages with intricate layouts.
+					</p>
+					<div>
+						<ul class="footer__social-icons">
+							<li>
+								<a
+									href="https://twitter.com/aniqatc"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Twitter profile"
+									><i class="fa-brands fa-square-x-twitter"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://github.com/aniqatc"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Github profile"
+									><i class="fa-brands fa-square-github"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://www.linkedin.com/in/aniqaio"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Linkedin profile"
+									><i class="fa-brands fa-linkedin"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="mailto:hello@aniqa.io"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Email me"
+									><i class="fa-solid fa-square-envelope"></i
+								></a>
+							</li>
+							<li>
+								<a
+									href="https://www.aniqa.dev/"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Personal website/website directory"
+									><i class="fa-solid fa-square-up-right"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
